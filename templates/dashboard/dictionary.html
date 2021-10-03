@@ -1,0 +1,41 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+{% block content %}
+<section class='text-center container'>
+    <h2>Talabalar Lug'ati</h2>
+    <p>Fonetikani, ta'rifni va so'zga misolni olish uchun istalgan so'zni kiriting.</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input class="btn btn-danger" type="submit" value="Qidirish">
+    </form><br>
+    <div class="content-section p-0 mt-5">
+        {% if input %}
+        <div class="custom-header">
+            <h2>{{input}}</h2>
+            <h6>{{phonetics}}</h6>
+            <audio id="player" src="{{audio}}"></audio>
+            <div>
+                <a onclick = "document.getElementById('player').play()"<i class='fa fa-volume-up fa-2x'></i></a>
+            </div>
+        </div>
+
+        <hr class="p-0 m-0">
+
+        <p class="float-left">
+            <h4>Definition: {{definition}}</h4>
+            <h4>Example: {{example}}</h4>
+        </p>
+        Synonyms:
+        {% for synonym in synonyms %}
+            {{synonym}}
+        {% endfor %}
+        <hr>
+
+    </div>
+    {% else %}
+    <h2>Kechirasiz, API so'rovi chegarasi oshib ketdi.</h2>
+    {% endif %}
+</section>
+{% endblock content %}

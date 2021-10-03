@@ -1,0 +1,131 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="container text-center">
+  <h3>Assalomu alaykum!</h3>
+  <h4>Hush kelibsiz! </h4>
+
+  <hr> <br>
+  <div class="row">
+    <div class="col-md-3">
+      <a href="{% url 'notes' %}">
+        <div class="card">
+          <img class="card-img-top" src="images/notes.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Eslatmalar
+            </h5>
+            Keyinchalik ularga havola qilish uchun eslatmalar yarating. Ular o'chirilmaguncha doimiy saqlanadi
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'homework' %}">
+        <div class="card">
+          <img class="card-img-top" src="images/homework.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Uy vazifasi
+            </h5>
+            Uy vazifalarini qo'shing va ularga belgilangan muddatlarni belgilang. Belgilangan muddatlarga ko'ra ular ko'rsatiladi
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="{% url 'youtube' %}">
+        <div class="card">
+          <img class="card-img-top" src="images/youtube.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Youtube
+            </h5>
+            Youtube -da qidiring va youtube -da ijro etish uchun kerakli videoni tanlang
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="{% url 'todo' %}">
+        <div class="card">
+          <img class="card-img-top" src="images/todo.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Kun tartibi
+            </h5>
+            Kun uchun bajariladigan ishlar ro'yxatini qo'shing va tugatganingizda ularni olib tashlang
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-3 ">
+      <a href="{% url 'books' %}">
+        <div class="card mt-20">
+          <img class="card-img-top" src="images/books.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Kitoblar
+            </h5>
+            Kitoblarni to'g'ri tashkil etilgan kitoblar menyusidan ko'rib chiqing
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+    <div class="col-md-3">
+      <a href="{% url 'dictionary' %}">
+        <div class="card">
+          <img class="card-img-top" src="images/dictionary.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Lug'at
+            </h5>
+            Kitobdagi so'z boyligi sizni bezovta qilyaptimi? Muammo yo'q, so'zni kiriting va uning ma'nosi ko'rsatiladi
+            deyarli bir zumda.
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="{% url 'wiki' %}">
+        <div class="card">
+          <img class="card-img-top" src="images/wiki.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              WikiPedia
+            </h5>
+            Uy vazifasi va topshiriqlar? Tez natijalarga erishish uchun Vikipediyani qidiring
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="col-md-3">
+      <a href="{% url 'conversion' %}">
+        <div class="card">
+          <img class="card-img-top" src="images/conversion.jpg" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Konversiya
+            </h5>
+            O'lchovlarni tanlaganingizga aylantirishga yordam beradigan konvertatsiya jadvalini ko'rib chiqing.
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br><br><br><br><br><br>
+
+
+
+</section>
+{% endblock content %}

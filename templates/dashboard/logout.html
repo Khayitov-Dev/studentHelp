@@ -1,0 +1,10 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+<div class="border-top pt-3 text-center">
+  <h2>Siz tizimdan chiqdingiz</h2>
+
+  <small class="text-muted"><a class="btn btn-danger" href="{% url 'login' %}">Qayta kirish</a>
+  </small>
+</div>
+{% endblock content %}
