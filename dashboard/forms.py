@@ -33,8 +33,8 @@ class TodoForm(forms.ModelForm):
 
 class ConversionForm(forms.Form):
     CHOICES = [
-        ('lenght','Lenght'),
-        ('mass','Mass'),
+        ('lenght','Uzunlik'),
+        ('mass','Massa'),
     ]
     Process= forms.ChoiceField(choices= CHOICES, widget=forms.RadioSelect)
 
